@@ -1,0 +1,3 @@
+- check type if setting cookie is array, if array then serialize
+- add form class
+- add ORM / Database model
