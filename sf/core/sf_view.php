@@ -6,7 +6,8 @@ class SF_View {
 	function __construct() {
 	}
 	
-	function load($viewName) {
+	function load($viewName, $data=array()) {
+		extract($data);
 		include_once(SF_VIEWS_DIR . $viewName);
 	}
 	
