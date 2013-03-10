@@ -4,6 +4,7 @@ namespace sf\core;
 class SF_View {
 	
 	function __construct() {
+		$this->view = $this;
 	}
 	
 	function load($viewName, $data=array()) {
