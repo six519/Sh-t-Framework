@@ -3,10 +3,18 @@
  * Shit Framework loader 
  */
 use sf\core\ShitFramework;
-use sf\core\response\Http404;
+use sf\core\http\Http404;
 
 function __autoload($classname) {
-	@include_once(strtolower(str_replace("\\", "/",$classname)) . ".php");
+
+	$fileToLoad = strtolower(str_replace("\\", "/",$classname)) . ".php";
+
+	if(file_exists($fileToLoad)) {
+		include_once($fileToLoad);
+	} else {
+		$http404 = new Http404();
+	}
+	
 }
 
 //Run Shit Framework
