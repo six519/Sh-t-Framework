@@ -1,4 +1,4 @@
-#### NOTE: THIS IS NOT FINISH YET!!
+#### NOTE: THIS IS NOT YET FINISH!!
 
 #### Location of views and controllers
 
