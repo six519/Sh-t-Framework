@@ -13,8 +13,7 @@ Set the default controller at index.php (line 32)
 ``define("SF_DEFAULT_CONTROLLER", "DefaultController"); //name of controller without ".php" extension``
 
 DefaultController code (defaultcontroller.php)
-----------------------------------------------
-::
+---------------------------------------------- ::
 	namespace sf\\app\\controllers;
 	use sf\\core\\SF_Controller;
 	class DefaultController extends SF_Controller {
