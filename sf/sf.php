@@ -8,16 +8,11 @@ use sf\core\http\Http404;
 function __autoload($classname) {
 
 	$fileToLoad = str_replace("\\", "/",$classname) . ".php";
-	$fileToLoadAllLower = strtolower($fileToLoad);
 
-	if(file_exists($fileToLoadAllLower)) {
-		include_once($fileToLoadAllLower);
+	if(file_exists($fileToLoad)) {
+		include_once($fileToLoad);
 	} else {
-		if(file_exists($fileToLoad)) {
-			include_once($fileToLoad);
-		} else {
-			$http404 = new Http404();
-		}
+		$http404 = new Http404();
 	}
 	
 }
